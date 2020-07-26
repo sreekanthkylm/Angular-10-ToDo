@@ -50,13 +50,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ![](assets/ipad-addlist.PNG)
 
 * laptop - landerpage
-![](assets/laptop-addlist.PNG)
-
-* laptop - add/edit/view list
 ![](assets/laptop-lander.PNG)
 
+* laptop - add/edit/view list
+![](assets/laptop-addlist.png)
+
 * Code Coverage
-![](assets/code coverage.PNG)
+![](assets/code_coverage.PNG)
 
 ## Further help
 
