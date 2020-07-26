@@ -1,0 +1,83 @@
+.mat-card {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 160px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.06), 0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.02),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.01), 0 41.8px 33.4px rgba(0, 0, 0, 0.01), 0 100px 80px rgba(0, 0, 0, 0.01);
+}
+
+.custom-chip-list {
+    width: 100%;
+}
+
+.icon-label {
+    height: 24px;
+    vertical-align: super;
+    padding-left: 8px;
+    color: #dddddd;
+    font-size: 18px;
+    font-weight: 400;
+    &-dark {
+        @extend .icon-label;
+        color: #606060;
+    }
+}
+
+.mat-list-buttons {
+    background-color: #ff4e6a;
+    color: #fff;
+    min-width: 135px;
+    &.list_first_button {
+        margin-right: 20px;
+    }
+}
+
+.material-icons {
+    color: #ff4e6a;
+    &-outlined {
+        width: 24px;
+        &.list_back_button {
+            margin: 0 auto;
+        }
+        &.list_tag_button {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    &-header1 {
+        width: 100%;
+        font-weight: 500;
+        line-height: 45px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .current-week {
+        color: #d2d2d2;
+    }
+    &-header3 {
+        box-shadow: 0 8px 6px -6px #b2aeae;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        .current-date {
+            border-radius: 50px;
+            background: #ff4e6a;
+            padding: 5px;
+            color: #fff;
+        }
+        div:first-child,
+        div:last-child {
+            color: #d2d2d2;
+        }
+    }
+    > div {
+        width: 12.5%;
+        text-align: center;
+        line-height: 45px;
+        font-size: 20px;
+    }
+}

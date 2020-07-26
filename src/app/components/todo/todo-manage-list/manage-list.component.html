@@ -1,0 +1,75 @@
+<div class="flex-container-head">
+    <div class="flex-container-header1">{{currentMonth}}</div>
+    <div class="flex-container">
+        <div class="current-week" *ngFor="let day of weekDays">{{day}}</div>
+    </div>
+    <div class="flex-container flex-container-header3">
+        <div *ngFor="let week of currentWeek">
+            <span *ngIf="week==currentDate; else loggedOut" class="current-date">{{currentDate}}</span>
+            <ng-template #loggedOut>
+                <span>{{week}}</span>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<div class="list-container">
+    <mat-card>
+        <mat-card-title>
+            <h1>{{todoTitle}}</h1>
+        </mat-card-title>
+        <mat-card-content>
+            <form (ngSubmit)="itemForm.form.valid && onSubmit()" #itemForm="ngForm">
+                <div class="form-group">
+                    <label for="Projects">
+                        <i class="material-icons material-icons-outlined">folder_open</i>
+                        <span class="icon-label">Title</span>
+                    </label>
+                    <input type="text" id="title" class="form-control todo-input" name="title" #name="ngModel"
+                        [(ngModel)]="toDoItemModel.title" [required]="toDoItemModel.content ? null : true">
+                </div>
+                <div class="form-group">
+                    <label for="Description">
+                        <i class="material-icons material-icons-outlined">list_alt</i>
+                        <span class="icon-label">Description</span>
+                    </label>
+                    <textarea class="form-control" id="content" class="form-control todo-input" name="content"
+                        #name="ngModel" [(ngModel)]="toDoItemModel.content"
+                        [required]="toDoItemModel.title ? null : true"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Tags">
+                        <i class="material-icons material-icons-outlined list_tag_button">local_offer_outline</i>
+                        <span class="icon-label">Tags</span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <div class="label-groups" (click)="showChips()">
+                        <i class="material-icons material-icons-outlined">add</i>
+                        <span class="icon-label-dark">Add Tags</span>
+                    </div>
+                    <mat-form-field class="custom-chip-list" *ngIf="chipsShow">
+                        <mat-chip-list #chipList aria-label="Tag selection">
+                            <mat-chip color="accent" selected *ngFor="let tagItem of tagItems" [selectable]="selectable"
+                                [removable]="removable" (removed)="removeChips(tagItem)">
+                                {{tagItem.name}}
+                                <i *ngIf="removable" matChipRemove
+                                    class="material-icons material-icons-outlined">cancel</i>
+                            </mat-chip>
+                            <input placeholder="Add Tags..." [matChipInputFor]="chipList"
+                                [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                                (matChipInputTokenEnd)="addChips($event)">
+                        </mat-chip-list>
+                    </mat-form-field>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn mat-list-buttons list_first_button"
+                        (click)="backToList()">Back</button>
+                    <button *ngIf="editEnabled" type="submit" class="btn mat-list-buttons "
+                        [disabled]="!itemForm.form.valid">Update</button>
+                    <button *ngIf="!editEnabled" type="submit" class="btn mat-list-buttons "
+                        [disabled]="!itemForm.form.valid">Finish</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

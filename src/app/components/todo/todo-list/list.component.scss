@@ -1,0 +1,21 @@
+.todo-lists {
+  padding: 20px;
+  .row {
+    .item-lists {
+      flex: 50%;
+      max-width:50%;
+      margin-top: 24px;
+    }
+    &:after {
+      content: "";
+      flex: auto;
+    }
+  }
+  .mat-mini-fab {
+    background-color: #ff4e6a;
+    color: #fff;
+    position: fixed;
+    bottom: 16px;
+    left: 20px;
+  }
+}

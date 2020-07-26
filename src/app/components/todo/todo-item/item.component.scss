@@ -1,0 +1,41 @@
+.mat-card {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 160px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.06), 0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.02),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.01), 0 41.8px 33.4px rgba(0, 0, 0, 0.01), 0 100px 80px rgba(0, 0, 0, 0.01);
+    h3 {
+        font-weight: 500;
+    }
+    .delete_button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #ff4e6a;
+    }
+    .card-tag-item {
+        padding: 2px 8px;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 300;
+        margin-right: 5px;
+        display: inline-block;
+        color: #fff;
+    }
+    $chartColors: #ef5163, #6573fe, #fa9d46, #aa4edf, #00bf3e, #f9d050;
+    @for $i from 1 through 25 {
+        .card-tag-item-#{$i} {
+            @if $i<=6 {
+                background-color: nth($chartColors, $i);
+            }
+            @if $i>6 {
+                $random-color: rgb(random((50)+205), random((50)+205), random((50)+205));
+                background: $random-color;
+            }
+        }
+    }
+    .mat-card-actions {
+        color: #e6e6e6;
+        margin-left: 0px;
+    }
+}

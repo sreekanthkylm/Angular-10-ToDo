@@ -1,0 +1,12 @@
+<div class="todo-lists">
+  <h1>Hey Bubble,</h1>
+  <h2>This is your to-do list.</h2>
+  <div class="row" *ngIf="todoList">
+    <div class="item-lists" *ngFor="let todoItem of todoList; let i = index">
+      <app-item [item]="todoItem" class="item-list" [itemindex]="i+1"></app-item>
+    </div>
+  </div>
+  <button mat-mini-fab aria-label="Create An Item" (click)="createList()">
+    <i class="material-icons material-icons-outlined">add</i>
+  </button>
+</div>

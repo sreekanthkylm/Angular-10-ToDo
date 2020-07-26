@@ -1,0 +1,18 @@
+<mat-card (click)="viewItem(itemindex)">
+  <mat-card-title *ngIf="item?.tags">
+    <span class="card-tag-item card-tag-item-{{itemindex}}" *ngFor="let tag of item.tags; let i = index">
+      {{ (tag.name.length>15)? (tag.name | slice:0:15)+'..':(tag.name)  }}
+    </span>
+    <i class="material-icons delete_button" (click)="deleteItem(item)">delete</i>
+  </mat-card-title>
+  <mat-card-content>
+    <h3 *ngIf="item?.title">
+      {{ (item.title.length>30)? (item.title | slice:0:30)+'..':(item.title)  }}
+    </h3>
+    <p *ngIf="item?.content">
+      {{ (item.content.length>15)? (item.content | slice:0:15)+'..':(item.content)  }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    {{item?.dateTime}}
+  </mat-card-actions>
+</mat-card>
