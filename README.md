@@ -37,7 +37,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Todo App Screenshots
 
-![ipad-addlist](https://github.com/sreekanthkylm/Angular-10-ToDo/tree/master/assets/ipad-addlist.PNG)
+![](assets/ipad-addlist.PNG)
 
 
 ## Further help
