@@ -17,13 +17,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * A simple validation in Edit/Add item where the Finish/Update button remains disabled until either of the description or project field is filled.
 * Included Angular unit testing with Karma and Jasmine and maintained more than 80% code coverage. 
 
-# How To install and run this repository in your local machine
-Use git clone or download the folder to your local machine. Then run
+## How To install and run this repository in your local machine
 
-```npm install ```
+Use git clone or download the folder to your local machine. Then run 
+
+    npm install 
+
 to download the required node modules in your downloaded folder. Then start the application using
-
-```ng serve -o ```
+	
+    ng serve -o 
 
 ## Build
 
@@ -39,9 +41,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Todo App Screenshots
 
-![ipad-addlist](https://github.com/sreekanthkylm/Angular-10-ToDo/tree/master/assets/ipad-addlist.PNG?raw=true)
-
-
+![ipad-addlist](https://github.com/sreekanthkylm/Angular-10-ToDo/tree/master/assets/ipad-addlist.PNG)
 
 
 ## Further help
