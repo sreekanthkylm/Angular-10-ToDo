@@ -37,7 +37,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Todo App Screenshots
 
+* Mobile - landerpage
+![](assets/mobile-lander.PNG)
+* Mobile - add/edit/view list
+![](assets/mobile-addlist.PNG)
+* ipad - landerpage
+![](assets/ipad-lander.PNG)
+* ipad - add/edit/view list
 ![](assets/ipad-addlist.PNG)
+* laptop - landerpage
+![](assets/laptop-addlist.PNG)
+* laptop - add/edit/view list
+![](assets/laptop-lander.PNG)
 
 
 ## Further help
