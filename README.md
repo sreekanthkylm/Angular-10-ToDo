@@ -3,10 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
 # MyTodoApp Details
-
+* A Simple ToDo App having 1)List page with Todo tasks displayed as Tiles with delete option 2)Edit/View page for viewing and editing single Todo tasks with a calender
 * The application is in Angular 10 with recent version of Node and used Angular material component library, SCSS, flexbox layout module and template-driven forms. 
 * Local Storage is used for storing the data.
-* The application consists of two pages. The first page includes the list of to-dos and second page is for Edit/View or adding a new item with a calender showing current week.
 * The calendar is made dynamic which highlights the current date and each to-do item is automatically stored with created date and time. 
 * Angular Material chips is used for adding tag items in View/Edit page and all icons are material icons with outlined or filled feature.
 * For maintaining Angular state management properly all page reloads are routed back to the Home page. 
@@ -57,7 +56,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 * Code Coverage <br/>
 ![](assets/code_coverage.PNG)
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
